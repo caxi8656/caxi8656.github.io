@@ -1,5 +1,6 @@
 body {
-    background-color: #fff;
+    background-color: #eeeeee;
+    border-bottom: 5px solid purple;
     color: #333;
     font-family: Arial, Helvetica, sans-serif;
     padding: 1em;
@@ -7,14 +8,15 @@ body {
   }
 
   h1 {
-    color: #ff69b4;
+    color: hotpink;
     font-size: 2em;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    border-bottom: 1px solid #375e97;
+    border-bottom: 10px dotted purple;
   }
 
   h2 {
     font-size: 1.5em;
+    font-style: italic;
   }
 
   .job-title {
@@ -28,5 +30,5 @@ body {
   }
 
   a:hover {
-    text-decoration: none;
+    text-decoration: green;
   }
