@@ -59,6 +59,10 @@ body {
     padding: 1em 1em 1em;
   }
 
+  .card footer p{
+    color:black;
+  }
+
   h2{
     font-size: 2em;
     margin: 0;
