@@ -26,8 +26,7 @@ article {
   border-top: 1mm solid red;
   border-bottom: 1mm solid red;
 
-  background: url("/ica_img/top-image.png") no-repeat left top, 
-  url("/ica_img/bottom-image.png") no-repeat left bottom;
+  background: url("/ica_img/top-image.png") no-repeat left top, url("/ica_img/bottom-image.png") no-repeat left bottom;
 }
 
 address {
