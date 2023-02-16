@@ -18,9 +18,16 @@ img {
 }
 
 #overlay2 {
-    color:plum;
+    color: greenyellow;
     position:fixed;
-    bottom:10px;
-    right:500px;
+    bottom: 200px;
+    right:700px;
     text-align: center;
+}
+
+#overlay3 {
+    color: blue;
+    position: fixed;
+    top: 100px;
+    right: 550px;
 }
