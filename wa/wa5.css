@@ -1,0 +1,25 @@
+body, html {
+    height: 100%;
+    padding: 0;
+    margin: 0;
+    font-size: 64px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#overlay1 {
+    color:red;
+    position: fixed;
+    top: 50px;
+    left: 50px;
+}
+
+#overlay2 {
+    color:plum;
+    position:fixed;
+    bottom:50px;
+    right:50px;
+}
