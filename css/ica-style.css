@@ -53,6 +53,12 @@
     height: 100%;
   }
 
+  .center-fit {
+    max-width: 100%;
+    max-height: 100vh;
+    margin: auto;
+    }
+
   #grad {
     background-image: linear-gradient(to right, rgba(255,0,0,0), rgba(255,0,0,1));
   }
