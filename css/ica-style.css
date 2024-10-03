@@ -9,8 +9,7 @@
   body {
     margin: 0;
     background: #ccc;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255,0,0,0));
-    background-image: linear-gradient(rgba(255,0,0,0), rgba(0, 0, 0, 0.5));
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(255,0,0,0), rgba(0, 0, 0, 0.5));
   }
 
   article {
