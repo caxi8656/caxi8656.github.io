@@ -1,29 +1,31 @@
-img{
+img {
     display: block;
     width: 100%;
     height: auto;
 }
 
-* {box-sizing: border-box}
-
 /* Container needed to position the overlay. Adjust the width as needed */
 .container {
-  position: relative;
-  width: 50%;
-  max-width: 300px;
+    position: relative; /* Position relative to contain the overlay */
+    width: 50%; /* Width of the container */
+    max-width: 300px; /* Maximum width */
 }
 
-#overlay{
-    position: absolute;
-    bottom: 0;
-    background: rgb(0, 0, 0);
-    background: rgba(0, 0, 0, 0.5); /* Black see-through */
-    color: #f1f1f1;
-    width: 100%;
-    transition: .5s ease;
-    opacity:0;
-    color: white;
-    font-size: 20px;
-    padding: 20px;
-    text-align: center;
+#overlay {
+    position: absolute; /* Position absolute to the container */
+    bottom: 0; /* Align to the bottom of the container */
+    background: rgba(0, 0, 0, 0.5); /* Black see-through background */
+    color: #f1f1f1; /* Text color */
+    width: 100%; /* Full width of the container */
+    transition: .5s ease; /* Transition effect for hover */
+    opacity: 0; /* Start hidden */
+    color: white; /* Text color */
+    font-size: 20px; /* Font size */
+    padding: 20px; /* Padding inside the overlay */
+    text-align: center; /* Center text */
+}
+
+/* Show overlay on hover */
+.container:hover #overlay {
+    opacity: 1; /* Make overlay visible on hover */
 }
