@@ -57,12 +57,12 @@ header {
 }
 
 body > * {
-  background-color: red;
+  background-color: green;
   padding: 1%;
 }
 
 main, header, nav, article, aside, footer, section {
-  background-color: rgba(0,255,0,0.5);
+  background-color: #55D455;
   padding: 1%;
 }
 
@@ -71,32 +71,36 @@ h1 {
   text-transform: uppercase;
 }
 
-header img {
+#logo {
   display: block;
   height: 60px;
   padding-top: 20.15px;
 }
 
-nav {
-  height: 50px;
+#nav-ul {
+  height: 35px;
   flex: 100%;
   display: flex;
-}
 
-nav ul {
-  padding: 0;
+  padding: 10px;
   list-style-type: none;
-  flex: 2;
   display: flex;
+  justify-content: center; /* Align items to the left */
+  background-color: #29E929; 
 }
 
-nav li {
+#nav-ul li {
   display: inline;
   text-align: center;
   flex: 1;
 }
 
-nav a, nav span {
+#nav-ul li a, #nav-ul li span {
+  text-transform: uppercase;
+  text-decoration: none;
+  color: black; /* Set text color to make sure it's visible */
+  font-weight: bold;
+  
   display: inline-block;
   font-size: 2rem;
   height: 3rem;
@@ -104,7 +108,13 @@ nav a, nav span {
   text-transform: uppercase;
   text-decoration: none;
   color: black;
+}
 
+
+nav li {
+  display: inline;
+  text-align: center;
+  flex: 1;
 }
 
 /* || main layout */
@@ -118,19 +128,39 @@ article, section {
 }
 
 aside {
-  flex: 1;
-  margin-left: 10px;
-  padding: 1%;
+  display: flex; /* Enable flexbox layout */
+  gap: 20px; /* Space between the two divs */
+  width: 100%; /* Ensures the parent takes full width */
+  box-sizing: border-box; /* Include padding and border in element's total width */
 }
 
-aside a {
-  display: block;
-  float: left;
-  width: 50%;
+#aside-a {
+  flex: 1; /* Take up space on the left */
+  min-width: 300px; /* Minimum width to prevent fusion */
+  padding: 20px; /* Add some padding */
+  box-sizing: border-box; /* Ensure padding is included in width */
+  background-color: #29E929; 
 }
 
-aside img {
-  max-width: 100%;
+#aside-img {
+  flex: 1; /* Take up space on the right */
+  display: flex;
+  flex-wrap: wrap; /* Allows images to wrap */
+  padding: 20px; /* Add some padding */
+  min-width: 300px; /* Minimum width to prevent fusion */
+  background-color: #29E929; 
+}
+
+#aside-img img {
+  max-width: 100px; /* Set a uniform width for images */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* Clearfix for flex container */
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
 }
 
 footer {
