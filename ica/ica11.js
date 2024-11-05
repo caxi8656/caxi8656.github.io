@@ -15,9 +15,11 @@ function calculateDogAge() {
 }
 
 function reverseNumber() {
-    let numberArray = prompt("Enter a series of numbers separated by commas:").split(",");
-    let reverseArray = numberArray.reverse();
-    let result = "Reversed numbers: " + reverseArray.join(", ");
+    let numberString = prompt("Enter a series of numbers as a single string (e.g., 12345):");
+    // Split the string into an array of characters, reverse it, and join it back into a string
+    let reverseString = numberString.split("").reverse().join("");
+    
+    let result = "Reversed numbers: " + reverseString;
     document.getElementById("output").innerText = result;
 }
 
@@ -30,7 +32,13 @@ function alphabetString() {
 
 function upperConverter() {
     let lowerString = prompt("Enter a string:");
-    let upperString = lowerString.charAt(0).toUpperCase() + lowerString.slice(1);
-    let result = "Converted string: " + upperString;
+    // Split the string into words, capitalize the first letter of each word, then join them back together
+    let upperString = lowerString
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+
+    let result = "Capitalized Letters: " + upperString;
     document.getElementById("output").innerText = result;
 }
+
