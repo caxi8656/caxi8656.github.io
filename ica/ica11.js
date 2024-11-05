@@ -25,10 +25,15 @@ function reverseNumber() {
 
 function alphabetString() {
     let letterString = prompt("Enter a string:");
-    let sortedString = letterString.split('').sort().join('');
+    // Split the string into characters, sort them alphabetically ignoring case, and join them back together
+    let sortedString = letterString.split('')
+        .sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()))
+        .join('');
+
     let result = "Alphabetically sorted: " + sortedString;
     document.getElementById("output").innerText = result;
 }
+
 
 function upperConverter() {
     let lowerString = prompt("Enter a string:");
