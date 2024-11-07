@@ -1,28 +1,45 @@
+/* Default styles */
 .full-img {
-    position: relative;
-    display: inline-block;
-  }
-  
-  .displayed-img {
-    width: 50%;
-    height: auto;
-  }
-  
-  .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0); /* Initially transparent */
-    transition: background-color 0.3s; /* Smooth transition */
-    pointer-events: none; /* So the overlay doesn’t block clicks on the button */
-  }
-  
-  button {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 10; /* To make sure buttons are on top */
-  }
-  
+  position: relative;
+  display: inline-block;
+  width: 20%; /* Small size by default */
+  transition: width 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.displayed-img {
+  width: 100%; /* Take full width of .full-img */
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0); /* Initially transparent */
+  transition: background-color 0.3s; /* Smooth transition */
+  pointer-events: none; /* Overlay doesn’t block clicks on the button */
+}
+
+button {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10; /* Make sure buttons are on top */
+}
+
+/* Styles when an image is enlarged */
+.full-img.enlarged {
+  width: 80%; /* Larger size when clicked */
+  transform: translateY(-10px); /* Slight lift effect */
+}
+
+.gallery {
+  display: flex;
+  justify-content: space-around;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition: all 0.3s;
+}
