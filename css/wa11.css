@@ -1,16 +1,33 @@
-/* Default styles */
+/* Container for all images */
+.gallery {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 10px;
+  transition: all 0.3s;
+}
+
+/* Default styles for each image container */
 .full-img {
   position: relative;
   display: inline-block;
-  width: 20%; /* Small size by default */
-  transition: width 0.3s, transform 0.3s; /* Smooth transition */
+  width: 20%; /* Smaller size for images by default */
+  transition: width 0.3s;
 }
 
+/* Styles for the first image to be larger by default */
+.full-img:first-child {
+  width: 50%; /* Larger size for the first image */
+}
+
+/* Styles for the displayed image */
 .displayed-img {
-  width: 100%; /* Take full width of .full-img */
+  width: 100%; /* Take full width of the .full-img container */
   height: auto;
 }
 
+/* Styles for the overlay */
 .overlay {
   position: absolute;
   top: 0;
@@ -18,28 +35,25 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0); /* Initially transparent */
-  transition: background-color 0.3s; /* Smooth transition */
-  pointer-events: none; /* Overlay doesn’t block clicks on the button */
+  transition: background-color 0.3s;
+  pointer-events: none;
 }
 
+/* Button styling */
 button {
   position: absolute;
   bottom: 10px;
   left: 10px;
-  z-index: 10; /* Make sure buttons are on top */
+  z-index: 10;
 }
 
-/* Styles when an image is enlarged */
+/* Styles for when an image is clicked/enlarged */
 .full-img.enlarged {
-  width: 80%; /* Larger size when clicked */
-  transform: translateY(-10px); /* Slight lift effect */
+  width: 50% !important; /* Enlarged size for the clicked image */
+  order: -1; /* Move the clicked image to the top */
 }
 
-.gallery {
-  display: flex;
-  justify-content: space-around;
-  align-items: flex-end;
-  flex-wrap: wrap;
-  gap: 10px;
-  transition: all 0.3s;
+/* Reset other images to 20% when any image is clicked */
+.full-img:not(.enlarged) {
+  width: 20% !important;
 }
