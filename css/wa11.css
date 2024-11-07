@@ -49,11 +49,11 @@ button {
 
 /* Styles for when an image is clicked/enlarged */
 .full-img.enlarged {
-  width: 50% !important; /* Enlarged size for the clicked image */
+  width: 50%; /* Enlarged size for the clicked image */
   order: -1; /* Move the clicked image to the top */
 }
 
 /* Reset other images to 20% when any image is clicked */
 .full-img:not(.enlarged) {
-  width: 20% !important;
+  width: 20%; /* Ensure other images are reset to 20% */
 }
