@@ -1,19 +1,13 @@
-// Select all buttons and overlays
+// Select all buttons and image containers
 const buttons = document.querySelectorAll('.dark');
-const overlays = document.querySelectorAll('.overlay');
+const fullImages = document.querySelectorAll('.full-img');
 
-// Loop through each button and add a click event listener
 buttons.forEach((btn, index) => {
   btn.addEventListener('click', function() {
-    const overlay = overlays[index]; // Get the corresponding overlay
-    if (btn.textContent === 'Darken') {
-      btn.setAttribute('class', 'light');
-      btn.textContent = 'Lighten';
-      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)'; // Dark overlay
-    } else {
-      btn.setAttribute('class', 'dark');
-      btn.textContent = 'Darken';
-      overlay.style.backgroundColor = 'rgba(0, 0, 0, 0)'; // Transparent overlay
-    }
+    // Remove the 'enlarged' class from all images
+    fullImages.forEach(img => img.classList.remove('enlarged'));
+
+    // Add the 'enlarged' class to the clicked image
+    fullImages[index].classList.add('enlarged');
   });
 });
