@@ -8,13 +8,15 @@ function fetchComic() {
     fetch(apiUrl)
         .then(response => response.json())
         .then(data => {
-            // Update the comic title and image
+            // Display the comic and update the title and image
+            document.getElementById("comicResult").style.display = "block";
             document.getElementById("comicTitle").textContent = data.title;
             document.getElementById("comicImage").src = data.img;
             document.getElementById("comicImage").alt = data.alt;
         })
         .catch(error => {
             console.error("Error fetching comic:", error);
+            document.getElementById("comicResult").style.display = "block";
             document.getElementById("comicTitle").textContent = "Sorry, something went wrong!";
             document.getElementById("comicImage").src = "";
         });
