@@ -9,6 +9,6 @@ function fetchJoke() {
         })
         .catch(error => {
             console.error("Error fetching joke:", error);
-            document.getElementById("jokeText").textContent = "Sorry, something went wrong!";
+            document.getElementById("jokeText").textContent = "ALERT! Something went wrong!";
         });
 }
